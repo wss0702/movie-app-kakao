@@ -1,0 +1,179 @@
+/* src/pages/popular/Popular.css */
+
+.popular-page {
+  padding: 20px;
+  color: white;
+  background-color: #111;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.view-mode-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.view-mode-toggle button {
+  padding: 10px 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.view-mode-toggle button:hover {
+  background-color: #555;
+}
+
+.view-mode-toggle .active {
+  background-color: #555;
+  color: #fff;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.movie-card {
+  text-align: center;
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  border-bottom: 2px solid #333;
+}
+
+.movie-card h3 {
+  padding: 10px;
+  font-size: 1rem;
+  color: white;
+}
+
+.movie-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.movie-table th,
+.movie-table td {
+  padding: 10px;
+  border: 1px solid #555;
+  text-align: left;
+}
+
+.movie-table th {
+  background-color: #333;
+}
+
+.movie-table td {
+  background-color: #222;
+}
+
+.movie-poster {
+  width: 80px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.pagination-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-button:hover {
+  background-color: #555;
+}
+
+.pagination-button:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  font-size: 1rem;
+  color: white;
+}
+
+.loading-message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: gray;
+}
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .view-mode-toggle {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .view-mode-toggle button {
+    width: 100%;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .pagination-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .movie-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .pagination-info {
+    font-size: 0.9rem;
+  }
+
+  .loading-message {
+    font-size: 1rem;
+  }
+}

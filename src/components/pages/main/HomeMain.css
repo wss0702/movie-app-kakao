@@ -1,0 +1,11 @@
+/* HomeMain.css */
+
+.home {
+  display: block;
+}
+
+html,
+body {
+  overflow-y: scroll !important;
+  background-color: #141414 !important;
+}
